@@ -50,6 +50,7 @@ function downloadconf() {
   mkdir $CONFIGFOLDER
   cp '/root/aqabkup/masternode.conf' $CONFIGFOLDER
   cp '/root/aqabkup/aqa.conf' $CONFIGFOLDER
+  cp -r '/root/.aqa/blocks' $CONFIGFOLDER
 }
 
 function compile_error() {

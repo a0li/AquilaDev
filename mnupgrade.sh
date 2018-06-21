@@ -45,11 +45,15 @@ function configure_systemd() {
   systemctl daemon-reload
   sleep 3
   systemctl start $COIN_NAME.service
+}
+
+function finishedsetup() {
   echo -e "Finished! Masternode started. Please confirm status"
 }
 
 function setup_node() {
   configure_systemd
+  finishedsetup
 }
 
 
